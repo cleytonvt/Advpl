@@ -8,6 +8,8 @@
 #include "TbiConn.ch"
 #include "TbiCode.ch"
 
+/*Author: CLeyton Victor 28/11/2020*/
+
 User Function MyTeca500()
 
 RegToMemory("AB6",.F.)
