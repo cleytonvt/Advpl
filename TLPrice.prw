@@ -279,7 +279,7 @@ If !Empty(cClas)
     oFont1  := TFont():New( "arial",0,-16,,.F.,0,,400,.F.,.F.,,,,,, )
 	oDlg1   := MSDialog():New( 100,230,280,430,"Altera Preço",,,.F.,,,,,,.T.,,,.T. )
 	oSay1   := TSay():New( 004,004,{||"Novo Preço:"},oDlg1,,oFont1,.F.,.F.,.F.,.T.,CLR_BLACK,CLR_WHITE,084,015)
-	oGet1   := TGet():New( 020, 009, { | u | If( PCount() == 0, nPreco, nPreco := u ) },oDlg1,060, 010, "@E 999.99",, 0, 16777215,,.F.,,.T.,,.F.,,.F.,.F.,,.F.,.F. ,,"nPreco",,,,lHasButton  )
+	oGet1   := TGet():New( 020, 009, { | u | If( PCount() == 0, nPreco, nPreco := u ) },oDlg1,060, 010, "@E 9,999,999.99",, 0, 16777215,,.F.,,.T.,,.F.,,.F.,.F.,,.F.,.F. ,,"nPreco",,,,lHasButton  )
 	oBtn1   := TButton():New( 45,004,"Confirmar",oDlg1,{||Ok(cProd)},060,012,,oFont1,,.T.,,"",,,,.F. )
 	
 	oDlg1:Activate(,,,.T.)
@@ -314,7 +314,7 @@ DbSelectArea("SD1")
 SD1->(DbSetOrder(1))
 SD1->(DbSeek(xFilial("SD1")+TP->D1_DOC+TP->D1_SERIE+TP->D1_FORNECE+TP->D1_LOJA+cProd)) 
 
-Alert("tESTE2"+SD1->D1_COD+'-'+SD1->D1_DOC+'-'+SD1->D1_SERIE+'-'+SD1->D1_XOK)
+
 RecLock("SD1",.F.)
 SD1->D1_XOK := "S"   
 SD1->(MsUnLock())
